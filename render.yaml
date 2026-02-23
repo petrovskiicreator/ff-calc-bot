@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: ff-calc-bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot_pro.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MANAGER_CHAT_ID
+        sync: false
